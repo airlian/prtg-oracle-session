@@ -34,7 +34,7 @@ BEGIN_S
 )
 
 echo $prtg
-url="http://192.168.20.49:5050/$1"
+url="http://192.168.20.49:5050/$1$2"
 echo $url
 /usr/bin/curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -s -k -m 10 "$url" -d "content=$prtg"
 echo

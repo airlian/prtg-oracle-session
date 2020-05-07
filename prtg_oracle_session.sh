@@ -23,7 +23,7 @@ begin
     fetch session_cur into l_group, l_count;
     exit when session_cur%NOTFOUND;
         dbms_output.put_line('<result>');
-        dbms_output.put_line('<channel>'|| l_group ||'</channel>');
+        dbms_output.put_line('<channel>'|| nvl(l_group,'NULL') ||'</channel>');
         dbms_output.put_line('<value>'|| l_count ||'</value>');
         dbms_output.put_line('</result>');
     end loop;
